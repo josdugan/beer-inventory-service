@@ -1,4 +1,4 @@
-name: build-beerinventoryservice
+name: build
 
 on:
   push:
