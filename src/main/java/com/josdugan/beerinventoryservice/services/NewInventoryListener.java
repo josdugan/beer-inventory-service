@@ -1,8 +1,8 @@
 package com.josdugan.beerinventoryservice.services;
 
-import com.josdugan.beerinventoryservice.config.JmsConfig;
 import com.josdugan.beerinventoryservice.domain.BeerInventory;
 import com.josdugan.beerinventoryservice.repositories.BeerInventoryRepository;
+import com.josdugan.beerworkscommon.constants.MessageQueues;
 import com.josdugan.beerworkscommon.dtos.BeerDto;
 import com.josdugan.beerworkscommon.events.NewInventoryEvent;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +17,7 @@ public class NewInventoryListener {
 
     private final BeerInventoryRepository beerInventoryRepository;
 
-    @JmsListener(destination = JmsConfig.NEW_INVENTORY_QUEUE)
+    @JmsListener(destination = MessageQueues.NEW_INVENTORY_QUEUE)
     public void listen(NewInventoryEvent event) {
         log.debug("Got Inventory: " + event.toString());
 
