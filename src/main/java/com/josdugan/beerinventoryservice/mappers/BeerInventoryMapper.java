@@ -1,7 +1,7 @@
 package com.josdugan.beerinventoryservice.mappers;
 
 import com.josdugan.beerinventoryservice.domain.BeerInventory;
-import com.josdugan.beerinventoryservice.web.model.BeerInventoryDto;
+import com.josdugan.beerworkscommon.dtos.BeerInventoryDto;
 import org.mapstruct.Mapper;
 
 @Mapper(uses = DateMapper.class)
